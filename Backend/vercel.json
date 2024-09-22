@@ -2,27 +2,27 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.js",  // Main file of your backend
+      "src": "server.js",  // Main file of your backend
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/user/(.*)",  // Route for fetching user transactions and balance
-      "dest": "/index.js"
+      "dest": "/server.js"
     },
     {
       "src": "/crypto-transactions/(.*)",  // Route for fetching crypto transactions
-      "dest": "/index.js"
+      "dest": "/server.js"
     },
     {
       "src": "/transactions",  // Route for posting a new transaction
-      "dest": "/index.js"
+      "dest": "/server.js"
     }
   ],
   "env": {
     "MONGODB_URI": "mongodb+srv://<username>:<password>@cluster0.6coalvf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
-    "ETHERSCAN_API_KEY": "Your Eth Key",
+    "ETHERSCAN_API_KEY": "5YRZPPNSUR6DE6SXZ23SA3M84YEJ6VKGVN",
     "PORT": "3000"
   }
 }
