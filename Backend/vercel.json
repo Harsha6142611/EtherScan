@@ -2,21 +2,21 @@
   "version": 2,
   "builds": [
     {
-      "src": "server.js",  // Main file of your backend
+      "src": "server.js",  
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/user/(.*)",  // Route for fetching user transactions and balance
+      "src": "/user/(.*)",  
       "dest": "/server.js"
     },
     {
-      "src": "/crypto-transactions/(.*)",  // Route for fetching crypto transactions
+      "src": "/crypto-transactions/(.*)", 
       "dest": "/server.js"
     },
     {
-      "src": "/transactions",  // Route for posting a new transaction
+      "src": "/transactions",  
       "dest": "/server.js"
     }
   ],
